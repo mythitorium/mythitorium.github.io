@@ -1,15 +1,154 @@
 <!DOCTYPE html>
 <html>
-<body>
+<head>
+<title>Myth Lab - Home</title>
+<style>
 
-<! --title pane-->
+:root {
+    --teal: white;
+    --light-teal: rgb(62, 209, 209);
+    --width: 955px;
+    --b-width: 24px;
+    --light-gray: rgb(224, 224, 224);
+    --tan: tan;
+}
 
-<p style="text-align:center; font-size:45px; font:georgia;">Mythitorium's Epic Site</p>
-<p style="text-align:center; font-size:18px; font:georgia;">Hello There.</p>
+.mainBody {
+    font-size:18px;
+    font:gorgia;
+    text-align:center;
 
-<! --introductary text-->
+    position: relative;
+    width: var(--width);
+    margin:0 auto;
+
+    border-color: var(--light-gray);
+    border-style: solid;
+    background-color: var(--light-gray);
+    border-left-width: var(--b-width);
+    border-right-width: var(--b-width);
+}
+
+.mainBody:before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: -300px;
+    left: -30px;
+    right: -30px;
+    bottom: -20px;
+    border: 6px solid black;
+    border-top: none;
+    border-bottom: none;
+    background-color: white;
+}
+
+.mainBody:after {
+    content: " ";
+    position: absolute;
+    z-index: -2;
+    top: -300px;
+    left: -36px;
+    right: -30px;
+    bottom: -20px;
+    border: 6px solid rgb(44, 255, 44);
+    border-top: none;
+    border-bottom: none;
+    background-color: white;
+
+}
+
+.spacer {
+    width: var(--width);
+    margin:0 auto;
+    background-color: white;
+}
+
+.columnImage {
+    float: left;
+    width: 30%;
+    padding: 5px;
+    background-color: var(--light-gray);
+    border-color: var(--light-gray);
+    border-left-width: var(--b-width);
+    border-right-width: var(--b-width);
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.columnText {
+    float: left;
+    width: 67%;
+    padding: 5px;
+    background-color: var(--light-gray);
+    border-color: var(--light-gray);
+    border-left-width: var(--b-width);
+    border-right-width: var(--b-width);
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+</style>
+</head>
 
 
+<body style="background-color: rgb(156, 156, 156);">
+
+<div class="mainBody">
+    <p style="font-size: 45px;">✧ Myth Lab ✧</p>
+</div>
+
+<div class="spacer"><p></p></div>
+
+<div class="mainBody" style="background-color: var(--tan);border-color: var(--tan);"><p>
+    <img style="text-align:center;" src="https://media.tenor.com/images/fa9f63ae5e7ed9523d89c8f24b9f9bb1/tenor.gif" alt="Look at this dancing cat!">
+</p></div>
+
+<div class="spacer"><p></p></div>
+
+<div class="mainBody">
+    <p>Hello There.</p>
+    <p>This is my website (work in progress).</p>
+    <p>Experince greatness below (please I am begging you. I have 17 wives and 324.7 children to feed).</p>
+</div>
+
+<div class="spacer"><p></p></div>
+
+<div class="mainBody" style="background-color: var(--tan);border-color: var(--tan);">
+    <p style="font-size: 30px;">Stuff I Have Doneᵀᴹ</p>
+</div>
+
+<div class="spacer"><p></p></div>
+
+<div class="mainBody" style="border-bottom-width: 180px;border-top-width: 15px">
+    <div class="columnImage">
+        <img width=100% src="https://media.discordapp.net/attachments/737411925713092670/825067456627212339/2021-03-26_19.02.51.png?width=1202&height=676" alt="RedditMC lobby" style="vertical-align: center;">
+    </div>
+    <div class="columnText" style="text-align: left; border-right-width: var(--b-width);" >
+        <b style="font-size: 25px;">RedditMC Minecraft Network</b>
+        <p>Staffed the Discord & Minecraft servers as an Admin. Very fun community not gonna lie.</p>
+        <p>I swear I've gotten Staff Of The Month every month for 14 years. Trust me on this one, I'm telling you it's 100% true.</p>
+    </div>
+</div>
+
+<div class="spacer"><p></p></div>
+
+<div class="mainBody"><p>That's all I've done, please forgive me I'm not an old man with a plethera of experince.</p></div>
+
+<div class="spacer"><p></p></div>
+
+<div class="mainBody" style="background-color: var(--tan);border-color: var(--tan);">
+    <p style="font-size: 10px;">©2021 Copyright lololol</p>
+</div>
 
 </body>
 </html>
+
