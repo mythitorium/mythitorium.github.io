@@ -12,9 +12,10 @@ html {
     --tan: tan;
 }
 
+
 .mainBody {
-    font-size:18px;
-    font:gorgia;
+    font-size:16px;
+    font-family:Arial, sans-serif;
     text-align:center;
 
     position: relative;
@@ -65,7 +66,7 @@ html {
 
 .columnImage {
     float: left;
-    width: 30%;
+    width: 20%;
     padding: 8px;
     background-color: var(--light-gray);
     border-color: var(--light-gray);
@@ -81,7 +82,7 @@ html {
 
 .columnText {
     float: left;
-    width: 65%;
+    width: 75%;
     padding: 8px;
     background-color: var(--light-gray);
     border-color: var(--light-gray);
