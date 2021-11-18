@@ -59,8 +59,8 @@ html {
 
 .spacer {
     background-color: white;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     border-left: 6px solid rgb(0,0,0);
     border-right: 6px solid rgb(0,0,0);
 }
