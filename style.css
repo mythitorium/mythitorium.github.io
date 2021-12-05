@@ -13,8 +13,8 @@ html {
     --light-teal: rgb(62, 209, 209);
     --width: 955px;
     --b-width: 24px;
-    --light-gray: rgb(224, 224, 224);
-    --tan: tan;
+    --light-gray: rgb(75, 74, 82);
+    --tan: rgba(0,0,0,0);
 }
 
 .main {
@@ -23,12 +23,12 @@ html {
     font-size:16px;
     font-family:Arial, sans-serif;
     text-align:center;
-
-    border-left: 6px solid rgb(0,0,0);
-    border-right: 6px solid rgb(0,0,0);
+    color: rgb(230, 230, 230);
 
     padding-top: 20px;
     padding-bottom: 20px;
+
+    border-top: 4px solid;
 }
 
 .mainHeader {
@@ -36,33 +36,48 @@ html {
 
     font-size:16px;
     font-family:Arial, sans-serif;
-    text-align:center;
+    text-align:left;
 
-    border-left: 6px solid rgb(0,0,0);
-    border-right: 6px solid rgb(0,0,0);
-
+    color: white;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
+
 .wrapper {
     width:1050px;
     max-width:1050px;
-    position: absolute;
-    top: 0px;
-    right: 0;
-    left: 0;
+
+    
     margin: 0 auto;
 
-    border-left: 6px solid rgb(44, 255, 44);
+    border-left: 6px solid rgba(44, 255, 44,0);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.siteHeader {
+    margin: 0 auto;
+    background-color: rgb(65, 33, 122);
+    padding-top: 55px;
+    padding-bottom: 55px;
+
+    font-family:Arial, sans-serif;
+    text-align:center;
+    color: white;
+}
+
+.siteHeader:after {
+    clear: both;
 }
 
 .spacer {
-    background-color: white;
+    background-color: rgba(255, 0, 0, 00);
     padding-top: 7px;
     padding-bottom: 7px;
-    border-left: 6px solid rgb(0,0,0);
-    border-right: 6px solid rgb(0,0,0);
+    border-left: 6px solid rgba(0,0,0,0);
+    border-right: 6px solid rgba(0,0,0,0);
 }
 
 .columnImage {
