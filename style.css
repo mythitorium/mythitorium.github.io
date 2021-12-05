@@ -82,7 +82,7 @@ html {
 
 .columnImage {
     float: left;
-    width: 20%;
+    width: 15%;
     padding: 8px;
     background-color: var(--light-gray);
 }
@@ -95,7 +95,7 @@ html {
 
 .columnText {
     float: left;
-    width: 75%;
+    width: 80%;
     padding: 8px;
     background-color: var(--light-gray);
 }
