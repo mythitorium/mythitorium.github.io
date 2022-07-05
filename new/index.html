@@ -8,13 +8,13 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style2.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Maven+Pro|Quicksand|Anek+Latin|Oswald:200,400">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Maven+Pro|Quicksand|Anek+Latin|Oswald:200,400|Roboto+Condensed">
 
     <script src="index.js" defer></script>
 </head>
-<body class="body" onload="subPageSwitch2('buttonAbout')">
+<body class="body" onload="subPageSwitch2('buttonAbout','divAbout')">
 
-    <div class="vSpacer" style="--size: 80px"></div>
+    <div class="vSpacer" style="--size: 120px"></div>
 
     <div class="main">
         <img draggable="false" class="logo" src="https://cdn.discordapp.com/attachments/991198514438754304/991768783737856041/myth_logo_small_white_fixed.png" alt="Mythitorium">
@@ -24,13 +24,41 @@
 
     <div class="main mainGrid">
         <div class="mainGridChild">
-            <button id="buttonAbout" class="categoryButton restState" onclick="subPageSwitch2('buttonAbout')"><p class="mainButtonText">ABOUT</p></button>
-            <button id="buttonNotable" class="categoryButton restState" onclick="subPageSwitch2('buttonNotable')"><p class="mainButtonText">NOTABLE</p></button>
-            <button id="buttonOther" class="categoryButton restState" onclick="subPageSwitch2('buttonOther')"><p class="mainButtonText">OTHER</p></button>
-            <button id="buttonContact" class="categoryButton restState" onclick="subPageSwitch2('buttonContact')"><p class="mainButtonText">CAT</p></button>
+            <button id="buttonAbout" class="categoryButton restState" onclick="subPageSwitch2('buttonAbout','divAbout')"><p class="mainButtonText">ABOUT</p></button>
+            <button id="buttonNotable" class="categoryButton restState" onclick="subPageSwitch2('buttonNotable','divNotable')"><p class="mainButtonText">NOTABLE</p></button>
+            <button id="buttonOther" class="categoryButton restState" onclick="subPageSwitch2('buttonOther','divOther')"><p class="mainButtonText">OTHER</p></button>
+            <button id="buttonContact" class="categoryButton restState" onclick="subPageSwitch2('buttonContact','divContact')"><p class="mainButtonText">CAT</p></button>
         </div>
         <div></div>
-        <div></div>
+        <div class="mainGridChild">
+            <div id="divAbout" style="display: none;">
+                <p class="generalText lefted">
+                    Hello there<br><br>
+                    I like to play games, make games and write code<br><br>
+                    Sporting Godot & Python<br>Minecraft, TF2 & Geometry Dash are my bros
+                    <br><br><i>"If you wanna steak, you gotta prove it!"</i>
+                </p>
+            </div>
+            <div id="divNotable" style="display: none;">
+                <p class="generalText lefted" style="color: var(--color-text-faint);">Nothing here yet...</p>
+            </div>
+            <div id="divOther" style="display: none;">
+                <button class="listButton" onclick="window.open('https://www.curseforge.com/minecraft/texture-packs/even-better-enchants','_blank')" type="button">
+                    <img draggable="false" class="itemIcon" src="https://cdn.discordapp.com/attachments/993407434456567899/993592392915632188/curseforge_icon_01.png" alt="EBE Icon">
+                    <div></div>
+                    <div class="itemTextWrapper">
+                        <p class="itemTitleText">Even Better Enchants</p>
+                    </div>
+                </button>
+            </div>
+            <div id="divContact" style="display: none; padding-right: 100px;">
+                <p class="generalText">Have you seen this cat??</p>
+                <div class="vSpacer" style="--size: 15px"></div>
+                <img draggable="false" class="logo" src="https://cdn.discordapp.com/attachments/991198514438754304/993750374760587355/tenor.gif">
+                <div class="vSpacer" style="--size: 12px"></div>
+                <p class="generalText">Now you have :)</p>
+            </div>
+        </div>
     </div>
 
     <div class="main bottom">

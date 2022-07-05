@@ -4,10 +4,10 @@
     --color-text-faint: rgba(255,255,255,0.4);
 
     --main-div-width: 800px;
-    --c-box-left-width: 450px;
-    --c-box-right-width: 450px;
+    --c-box-left-width: 400px;
+    --c-box-right-width: 400px;
     --c-box-middle-width : 50px;
-    --c-box-height: 500px;
+    --c-box-height: 400px;
 
     --cat-button-color: rgba(255,255,255,1);
     --cat-button-on: rgb(0, 255, 42);
@@ -15,7 +15,12 @@
 
     --cat-button-spacing: 10px;
 
-    --default-font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    --list-item-color-hover: rgb(27, 29, 39);
+
+    --list-item-spacing: 10px;
+    --list-item-content-height: 65px;
+
+    --default-font-family: 'Poppins';
 }
 
 /* Content grid */
@@ -30,6 +35,7 @@
     margin-top: auto;
     margin-bottom: auto;
 }
+
 
 /* Better spacer div class */
 .vSpacer {
@@ -56,12 +62,23 @@
     margin: 0 auto;
 }
 
+.itemIcon {
+    width: var(--list-item-content-height);
+    height: var(--list-item-content-height);
+    border-radius: 10px;
+}
+
 .bottom {
     position: absolute;
     bottom: 0;
     left:40%;
     right:40%;
     background-color: rgba(255,255,255,0);
+}
+
+.itemTextWrapper {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .categoryButton {
@@ -73,6 +90,7 @@
     display: block;
     margin-top: var(--cat-button-spacing);
     margin-bottom: var(--cat-button-spacing);
+    outline:none;
 }
 
 .restState { color: var(--cat-button-color)}
@@ -84,6 +102,29 @@
 .activeState:hover { color: var(--cat-button-on); }
 .activeState:active { color: var(--cat-button-on); }
 .activeState:focus { color: var(--cat-button-on); }
+
+.listButton {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    border: none;
+    padding: var(--list-item-padding);
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: var(--list-item-content-height) 15px auto;
+    grid-template-rows: var(--list-item-content-height);
+
+    margin-top: var(--list-item-spacing);
+    margin-bottom: var(--list-item-spacing);
+
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.listButton:hover {
+    padding-left: 15px;
+    color: rgb(255, 147, 74);
+}
 
 /* ----------
 Below are all context-specific text box classes 
@@ -98,13 +139,17 @@ Below are all context-specific text box classes
 }
 
 /* Textbox for the about me under the name logo*/
-.subHeader {
+.generalText {
     font-family: 'Poppins';
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     margin-top: 0px;
     margin-bottom: 0px;
-    color: var(--color-text-faint);
+    color: var(--color-text);
+}
+
+.lefted {
+    text-align: left;
 }
 
 .mainButtonText {
@@ -113,4 +158,21 @@ Below are all context-specific text box classes
     font-weight: 200;
     text-align: right;
     font-size: 45px;
+}
+
+.itemTitleText {
+    font-family: 'Poppins';
+    font-size: 20px;
+    text-align: left;
+    margin: 0 auto 0 0;
+    background-color: rgba(255,255,255,0);
+}
+
+.itemSubText {
+    font-family: 'Roboto Condensed';
+    text-align: left;
+    font-size: 17px;
+    color: var(--color-text-faint);
+    background-color: rgba(255,255,255,0);
+    margin: 0 auto 0 0;
 }
