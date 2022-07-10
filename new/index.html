@@ -10,19 +10,23 @@
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Maven+Pro|Quicksand|Anek+Latin|Oswald:200,400|Roboto+Condensed">
 
+    <!-- js -->
     <script src="index.js" defer></script>
 </head>
 <body class="body" onload="subPageSwitch2('buttonAbout','divAbout')">
 
     <div class="vSpacer" style="--size: 120px"></div>
 
+    <!-- Logo -->
     <div class="main">
         <img draggable="false" class="logo" src="https://cdn.discordapp.com/attachments/991198514438754304/991768783737856041/myth_logo_small_white_fixed.png" alt="Mythitorium">
     </div>
 
     <div class="vSpacer" style="--size: 10px"></div>
 
+    <!-- Main content grid -->
     <div class="main mainGrid">
+        <!-- Main page buttons -->
         <div class="mainGridChild">
             <button id="buttonAbout" class="categoryButton restState" onclick="subPageSwitch2('buttonAbout','divAbout')"><p class="mainButtonText">ABOUT</p></button>
             <button id="buttonNotable" class="categoryButton restState" onclick="subPageSwitch2('buttonNotable','divNotable')"><p class="mainButtonText">NOTABLE</p></button>
@@ -30,6 +34,7 @@
             <button id="buttonContact" class="categoryButton restState" onclick="subPageSwitch2('buttonContact','divContact')"><p class="mainButtonText">CAT</p></button>
         </div>
         <div></div>
+        <!-- Page content -->
         <div class="mainGridChild">
             <div id="divAbout" style="display: none;">
                 <p class="generalText lefted">
@@ -65,6 +70,5 @@
         <p class="bottomText">©2021-2022 Copyright lololol</p>
     </div>
     <!-- ally is awesome -->
-
 </body>
 </html>
