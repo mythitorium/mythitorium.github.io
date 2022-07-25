@@ -1,7 +1,8 @@
 :root {
     --color-background: rgb(13, 16, 26);
-    --color-text: white;
+    --color-text: rgba(255,255,255,0.9);
     --color-text-faint: rgba(255,255,255,0.4);
+    --color-text-half: rgba(255,255,255,0.9);
 
     --main-div-width: 800px;
     --c-box-left-width: 400px;
@@ -16,9 +17,16 @@
     --cat-button-spacing: 10px;
 
     --list-item-color-hover: rgb(27, 29, 39);
+    --list-text-color-hover: rgb(255, 147, 74);
 
     --list-item-spacing: 10px;
     --list-item-content-height: 65px;
+
+    --redirect-button-size: 60px;
+    --redirect-button-spacing: 15px;
+    --github-button-color: rgb(127, 0, 153, 1);
+    --itch-button-color: rgb(250, 92, 92, 1);
+    --redirect-hover-offset: 0px;
 
     --default-font-family: 'Poppins';
 }
@@ -34,8 +42,16 @@
 .mainGridChild {
     margin-top: auto;
     margin-bottom: auto;
+    padding: 0;
 }
 
+.redirectButtonGrid {
+    display: grid;
+    grid-template-columns: var(--redirect-button-size) var(--redirect-button-size);
+    grid-template-rows: calc(var(--redirect-button-size) + var(--redirect-hover-offset));
+    column-gap: var(--redirect-button-spacing);
+    margin: 0 auto 0 0;
+}
 
 /* Better spacer div class */
 .vSpacer {
@@ -93,12 +109,12 @@
     outline:none;
 }
 
-.restState { color: var(--cat-button-color)}
+.restState { color: var(--cat-button-color) }
 .restState:hover { color: var(--cat-button-color-hover); }
 .restState:active { color: var(--cat-button-color-hover); }
 .restState:focus { color: var(--cat-button-color-hover); }
 
-.activeState { color: var(--cat-button-on)}
+.activeState { color: var(--cat-button-on) }
 .activeState:hover { color: var(--cat-button-on); }
 .activeState:active { color: var(--cat-button-on); }
 .activeState:focus { color: var(--cat-button-on); }
@@ -123,8 +139,31 @@
 
 .listButton:hover {
     padding-left: 15px;
-    color: rgb(255, 147, 74);
+    color: var(--list-text-color-hover);
 }
+
+.redirectButton {
+    padding: 0;
+    border: 1px solid white;
+    transition: 0.1s;
+    background-color: rgba(0,0,0,0);
+    border-radius: 50%;
+    width: var(--redirect-button-size);
+    height: var(--redirect-button-size);
+}
+
+.redirectButton:hover {
+    border: 4px solid var(--itch-button-color);
+}
+
+.redirectButtonIcon {
+    padding-top: 2px;
+    width: calc(var(--redirect-button-size) - 30px);
+    height: calc(var(--redirect-button-size) - 30px);
+}
+
+.github { background-color: rgba(0,0,0,0); }
+.itch { background-color: rgba(0,0,0,0); }
 
 /* ----------
 Below are all context-specific text box classes 
