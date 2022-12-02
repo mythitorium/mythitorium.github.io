@@ -11,13 +11,18 @@ function subPageSwitch(buttonId,divTarget) {
     document.getElementById(buttonId).classList.replace('dummy','isSelected');
 
     if (!currentDisplayedDiv == "") {
-        document.getElementById(currentDisplayedDiv).style.opacity = 0;
-        document.getElementById(currentDisplayedDiv).style.display = "inline";
-        document.getElementById(currentDisplayedDiv).style.zIndex = 1;
+        var old_item = document.getElementById(currentDisplayedDiv);
+        old_item.style.opacity = 0;
+        old_item.style.display = "inline";
+        old_item.style.zIndex = 1;
+        old_item.classList.replace('dummy','isDisabled');
     }
-    document.getElementById(divTarget).style.opacity = 1;
-    document.getElementById(divTarget).style.display = "block";
-    document.getElementById(divTarget).style.zIndex = 10;
+    
+    var new_item = document.getElementById(divTarget);
+    new_item.style.opacity = 1;
+    new_item.style.display = "block";
+    new_item.style.zIndex = 10;
+    new_item.classList.replace('isDisabled','dummy');
 
     previousCatButton = buttonId;
     currentDisplayedDiv = divTarget;

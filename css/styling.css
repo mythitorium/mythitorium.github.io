@@ -243,15 +243,10 @@ button {
     align-content: center;
 }
 
-.isSelected {
-    color: var(--selected-color) !important;
-}
-
-/* Cheap way of allowing the js classList.replace to happen. This does nothing and only exists to be replaced by the isSelected class when navButtons are pressed 
-Probably a better solution than this but I don't care enough to figure it out */
-.dummy {
-    --nothing-to-see-here: 0;
-}
+/* Cheap way of allowing the js to swap a class that has functionality with one that doesn't */
+.dummy { --nothing-to-see-here: 0; }
+.isDisabled { pointer-events: none; }
+.isSelected { color: var(--selected-color) !important; }
 
 /* Some text-lighting classes */
 .lightSpan { color: var(--font-color); }
