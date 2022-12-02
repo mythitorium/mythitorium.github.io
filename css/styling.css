@@ -158,7 +158,10 @@ button {
 
 .contentPanel {
     color: var(--light-font-color);
-    /* AAAAAAAAAAAAAAAAAAAAAA */
+    /* 
+    I need to manually calculate this otherwise the absolute positioned child elements will not have 
+    their width's bound and the contents of them will spill everywhere
+    */
     width: calc(((var(--wrapper-max-width) - var(--site-grid-gap))/5)*3);
 }
 
@@ -195,11 +198,14 @@ button {
 }
 
 /* Allergic to class names lol */
+
+/* Vertically align the title and sub-title of the project button */
 .projectButton > div:last-child {
     margin-top: auto;
     margin-bottom: auto;
 }
 
+/* Format the first p as the title */
 .projectButton > div:last-child > p:first-child {
     color: var(--font-color);
     font-family: 'Poppins';
@@ -208,6 +214,7 @@ button {
     transition: 0.15s;
 }
 
+/* Format the 2nd p as the sub-title */
 .projectButton > div:last-child > p:nth-child(2) {
     color: var(--half-font-color);
     font-family: 'Roboto Condensed';
@@ -215,9 +222,11 @@ button {
     font-size: 17px;
 }
 
+/* On hover have it jut out left and change the header color */
 .projectButton:hover { padding-left: 10px; } 
 .projectButton:hover > div:last-child > p:first-child { color: var(--hover-color); } 
 
+/* Add rounding to the project's icon img */
 .projectShowcase img {
     border-radius: 10px;
 }
@@ -238,14 +247,12 @@ button {
     color: var(--selected-color) !important;
 }
 
+/* Cheap way of allowing the js classList.replace to happen. This does nothing and only exists to be replaced by the isSelected class when navButtons are pressed 
+Probably a better solution than this but I don't care enough to figure it out */
 .dummy {
     --nothing-to-see-here: 0;
 }
 
-.lightSpan {
-    color: var(--font-color);
-}
-
-.glowSpan {
-    color: var(--shiny-font-color);
-}
+/* Some text-lighting classes */
+.lightSpan { color: var(--font-color); }
+.glowSpan { color: var(--shiny-font-color); }
