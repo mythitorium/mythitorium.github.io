@@ -2,104 +2,130 @@
 <html lang="en">
 <head>
     <title>Mythitorium</title>       
-    <link rel="icon" href="https://cdn.discordapp.com/attachments/991198514438754304/991198673671307345/unknown.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="images/site_icon.png" type="image/gif" sizes="16x16">
 
     <meta charset="UTF-8"> 
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-    <link rel="stylesheet" href="css/styling.css">   
-    <link rel="stylesheet" href="css/colors1.css">
+    <meta content="Download Now" property="og:title" />
+    <meta content="Download for free, today!" property="og:description" />
+    <meta content="https://mythitorium.com" property="og:url" />
+    <meta content="#00FF95" data-react-helmet="true" name="theme-color" />
 
-    <script src="switch.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body onload="subPageSwitch('buttonAbout','divAbout')">
+<body>
     <div class="wrapper">
         <div class="vhAlign">
-            <img src="https://cdn.discordapp.com/attachments/991198514438754304/1047578925674545193/myth-website-banner-01.png" alt="Banner" draggable="false">
+            <img src="images/website_banner_2_black.png"  draggable="false">
         </div>
 
         <div>
-            <div class="navPanel">
-                <button class="dummy" id="buttonAbout" onclick="subPageSwitch('buttonAbout','divAbout')"><p>ABOUT</p></button>
-                <button class="dummy" id="buttonThings" onclick="subPageSwitch('buttonThings','divThings')"><p>THINGS</p></button>
-                <button class="dummy" id="buttonSteam" onclick="subPageSwitch('buttonSteam','divSteam')"><p>TF2</p></button>
-                <button class="dummy" id="buttonCat" onclick="subPageSwitch('buttonCat','divCat')"><p>CAT</p></button>
-                <div class="mediaLinksBar">
-                    <button onclick="window.open('https://github.com/mythitorium','_blank')">
-                        <img src="https://cdn.discordapp.com/attachments/991198514438754304/1000513122576117852/unknown.png" alt="Github"></button>
-                    <button onclick="window.open('https://mythitorium.itch.io/','_blank')">
-                        <img src="https://cdn.discordapp.com/attachments/991198514438754304/1000512930695106571/unknown.png" alt="Itch.io"></button>
-                    <button onclick="window.open('https://steamcommunity.com/id/mythitorium/', '_blank')">
-                        <img src="https://cdn.discordapp.com/attachments/991198514438754304/1047661916933324890/steam-icon.png" alt="Steam"></button>
-                </div>
+            <div class="two-large">
+                <button><img src="buttons/full-01.png" draggable="false"></button>
+                <button><img src="buttons/full-02.png" draggable="false"></button>
             </div>
-            <div class="contentPanel">
-                <div id="divAbout" class="isDisabled">
-                    <p>
-                        Ahoy
-                        <br><br>
-                        I am a Canadian hobbyist programmer and game dev. I make stupid crap and put it on the internet.
-                        <br><br>
-                        I'm good with Godot and Rust.
-                        <br><br>
-                        I enjoy playing Video games, Lego, and I'm a bit of a Star Wars nerd (run while you still can)
-                        <br><br>
-                        If you really need something out of me send an email to mythitorium (at) pm (dot) me
-                    </p>
-                </div>
-                <div id="divThings" class="isDisabled">
-                    <div class="projectShowcase">
-                        <button class="projectButton" onclick="window.open('https://mythitorium.itch.io/the-tomb','_blank')">
-                            <div><img src="https://cdn.discordapp.com/attachments/991198514438754304/1148361352520409231/icon_64x.png" alt="Icon"></div>
-                            <div><p>The Tomb</p><p>For BRACKEYS GAME JAM 2023.2</p></div>
-                        </button>
-                        <button class="projectButton" onclick="window.open('https://modrinth.com/resourcepack/even-better-enchants','_blank')">
-                            <div><img src="https://cdn.discordapp.com/attachments/993407434456567899/993592392915632188/curseforge_icon_01.png" alt="Icon"></div>
-                            <div><p>Even Better Enchants</p></div>
-                        </button>
-                        <button class="projectButton" onclick="window.open('https://mythitorium.itch.io/gravity-slime','_blank')">
-                            <div><img src="https://cdn.discordapp.com/attachments/1006639461683183706/1009392439905222806/icon.png" alt="Icon"></div>
-                            <div><p>Gravity Slime</p><p>For LOWREZJAM 2022</p></div>
-                        </button>
-                        <button class="projectButton" onclick="window.open('https://mythitorium.itch.io/spider-mech','_blank')" type="button">
-                            <div><img src="https://cdn.discordapp.com/attachments/991198514438754304/1001533991582695434/icon-2.png" alt="Icon"></div>
-                            <div><p>Spider Mech</p><p>For MECHAJAM 3</p></div>
-                        </button>
-                    </div>
-                </div>
-                <div id="divSteam" class="isDisabled">
-                    <p>
-                        <!--
-                        <span class="glowSpan">I am collecting as many Force-a-Natures as humanly possible.</span> 
-                        If you play TF2 and have extra Force-a-Natures you're willing to trade, send a trade request! Ill get to it sooner or later.
-                        <br><br>
-                        I am currently in possession of over 1470 Force-a-Natures.
-                        <br><br>
-                        -->
-                        My steam trade link:
-                        <br>
-                        <a href="https://steamcommunity.com/tradeoffer/new/?partner=839023005&token=JXTs73WP" target=”_blank”>https://steamcommunity.com/tradeoffer/new/?partner=839023005&token=JXTs73WP</a>
-                        <br><br>
-                        this page had more to it but I'm too lazy to re-do it lmao
-                    </p>      
-                    <img src="https://cdn.discordapp.com/attachments/991198514438754304/1047668073693454426/image.png" alt="Gun">
-                </div>
-                <div id="divCat" class="isDisabled">
-                    <p>
-                        Have you seen this cat?
-                    </p>
-                    <br>
-                    <img src="https://cdn.discordapp.com/attachments/991198514438754304/993750374760587355/tenor.gif" alt="Cat">
-                    <br><br>
-                    <p>
-                        Now you have :)
-                    </p>
-                </div>
+            <div class="three-large">
+                <button><img src="buttons/plain-01.png" draggable="false"></button>
+                <button><img src="buttons/plain-02.png" draggable="false"></button>
+                <button><img src="buttons/plain-03.png" draggable="false"></button>
+            </div>
+            <div class="large-small">
+                <button><img src="buttons/plain-04.png" draggable="false"></button>
+                <button><img src="buttons/full-03.png" draggable="false"></button>
+                <button><img src="buttons/mini-1.png" draggable="false"></button>
+            </div>
+            <div class="double-stack-left">
+                <button><img src="buttons/square-1.png" draggable="false"></button>
+                <button><img src="buttons/plain-05.png" draggable="false"></button>
+                <button><img src="buttons/full-04.png" draggable="false"></button>
+                <button><img src="buttons/full-05.png" draggable="false"></button>
+                <button><img src="buttons/plain-06.png" draggable="false"></button>
+            </div>
+            <div class="two-large">
+                <button><img src="buttons/full-06.png" draggable="false"></button>
+                <button><img src="buttons/full-07.png" draggable="false"></button>
+            </div>
+            <div class="small-large">
+                <button><img src="buttons/mini-2.png" draggable="false"></button>
+                <button><img src="buttons/plain-07.png" draggable="false"></button>
+                <button><img src="buttons/plain-08.png" draggable="false"></button>
+            </div>
+            <div class="two-large">
+                <button><img src="buttons/full-08.png" draggable="false"></button>
+                <button><img src="buttons/full-09.png" draggable="false"></button>
+            </div>
+            <div class="double-stack-right">
+                <button><img src="buttons/plain-09.png" draggable="false"></button>
+                <button><img src="buttons/full-10.png" draggable="false"></button>
+                <button><img src="buttons/square-2.png" draggable="false"></button>
+                <button><img src="buttons/full-11.png" draggable="false"></button>
+                <button><img src="buttons/plain-10.png" draggable="false"></button>
+            </div>
+            <div class="two-large">
+                <button><img src="buttons/full-12.png" draggable="false"></button>
+                <button><img src="buttons/full-13.png" draggable="false"></button>
+            </div>
+            <div class="large-small">
+                <button><img src="buttons/plain-11.png" draggable="false"></button>
+                <button><img src="buttons/plain-12.png" draggable="false"></button>
+                <button><img src="buttons/mini-3.png" draggable="false"></button>
+            </div>
+            <div class="three-large">
+                <button><img src="buttons/plain-13.png" draggable="false"></button>
+                <button><img src="buttons/plain-14.png" draggable="false"></button>
+                <button><img src="buttons/full-14.png" draggable="false"></button>
+            </div>
+            <div class="two-large">
+                <button><img src="buttons/full-15.png" draggable="false"></button>
+                <button><img src="buttons/full-16.png" draggable="false"></button>
+            </div>
+            <div class="double-stack-left">
+                <button><img src="buttons/square-3.png" draggable="false"></button>
+                <button><img src="buttons/full-17.png" draggable="false"></button>
+                <button><img src="buttons/full-18.png" draggable="false"></button>
+                <button><img src="buttons/plain-15.png" draggable="false"></button>
+                <button><img src="buttons/plain-16.png" draggable="false"></button>
+            </div>
+            <div class="three-large">
+                <button><img src="buttons/plain-17.png" draggable="false"></button>
+                <button><img src="buttons/plain-18.png" draggable="false"></button>
+                <button><img src="buttons/plain-19.png" draggable="false"></button>
+            </div>
+            <div class="two-large">
+                <button><img src="buttons/full-19.png" draggable="false"></button>
+                <button><img src="buttons/full-20.png" draggable="false"></button>
+            </div>
+            <div class="large-small">
+                <button><img src="buttons/plain-20.png" draggable="false"></button>
+                <button><img src="buttons/plain-21.png" draggable="false"></button>
+                <button><img src="buttons/mini-4.png" draggable="false"></button>
+            </div>
+            <div class="small-large">
+                <button><img src="buttons/mini-5.png" draggable="false"></button>
+                <button><img src="buttons/plain-22.png" draggable="false"></button>
+                <button><img src="buttons/plain-23.png" draggable="false"></button>
+            </div>
+            <div class="two-large">
+                <button><img src="buttons/full-21.png" draggable="false"></button>
+                <button><img src="buttons/full-22.png" draggable="false"></button>
+            </div>
+            <div class="double-stack-right">
+                <button><img src="buttons/plain-24.png" draggable="false"></button>
+                <button><img src="buttons/plain-25.png" draggable="false"></button>
+                <button><img src="buttons/square-4.png" draggable="false"></button>
+                <button><img src="buttons/plain-26.png" draggable="false"></button>
+                <button><img src="buttons/plain-27.png" draggable="false"></button>
+            </div>
+            <div class="two-large">
+                <button><img src="buttons/full-23.png" draggable="false"></button>
+                <button><img src="buttons/full-24.png" draggable="false"></button>
             </div>
         </div>
 
-        <div class="vhAlign">
-            <p>2021-2023 Copyright lololol</p>
+        <div>
+            <p>copyright lololol</p>
         </div>
     </div>
 </body>
+</html>

@@ -1,3 +1,3 @@
 # mythitorium.github.io
 
-Personal website :stuff:
+Download for free!
