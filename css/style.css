@@ -1,126 +1,100 @@
+@font-face {
+  font-family: MF Crypt; /* set name */
+  src: url(mf_crypt.ttf); /* url of the font */
+}
+
+@font-face {
+  font-family: MF Trim; /* set name */
+  src: url(mf_trim.ttf); /* url of the font */
+}
+
+
 :root {
-    --wrapper-max-width: 600px;
-    --site-grid-gap: 35px;
-
-    --nav-row-size: 65px;
-
-    overflow-y: scroll;
-
-    --navSelected: 1;
-
-    --banner-size-x: 238px;
-    --banner-size-y: 76px;
+    --color-background: black;
+    --color-text: white;
 }
 
 
 body {
-    background-color: var(--background-color); 
+    background-color: var(--color-background); 
     margin: 0;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    border: none;
+    display: grid;
 }
 
 img {
-    width: 100%;
-    height: auto;
-    
+  transform-origin: center;
+  transform: scale(3);
+  image-rendering: crisp-edges;
 }
 
-button {
-    background-color: transparent;
+html {
+    margin: 0;
     border: none;
+    height: 100%;
+    flex: 1;
+}
+
+p {
     margin: 0;
     padding: 0;
-    text-align: inherit;
-    font: inherit;
-    border-radius: 0;
-    appearance: none;
-    cursor:pointer;
+    font-family: MF Trim;
+    font-size: 24px;
+    -webkit-font-smoothing: antialiased;
 }
 
 
-.vhAlign {
+body {
     display: grid;
-    justify-content: center;
-    align-content: center;
-}
+    grid-template-columns: 1fr 300px 1fr;
+    grid-template-rows: 1fr min-content min-content min-content min-content min-content 1fr;
+    grid-template-areas:
+    ". . ."
+    ". myth ."
+    ". nobs ."
+    ". text ."
+    ". email . "
+    ". emailText ."
+    ". . .";
+    > :nth-child(1) {
+        grid-area: myth;
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-areas: ". title .";
+        > :nth-child(1) {
+            grid-area: title;
+            font-family: MF Crypt;
+            font-size: 30px;
+        }
+    }
+    > :nth-child(2) {
+        grid-area: nobs;
+        grid-template-columns: repeat(min-content, 23);
+    }
+    > :nth-child(3) {
+        grid-area: text;
+        
+    }
+    > :nth-child(4) {
+        grid-area: email;
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-areas: ". button .";
+        > :nth-child(1) {
+            grid-area: button;
+        }
+    }
+    > :nth-child(5) {
+        grid-area: emailText;
+        text-align: center;
+        width: 100%;
+    }
+ }
 
-/* 
-#
-# Wrapper
-#
-*/
 
-.wrapper {
-    max-width: var(--wrapper-max-width);
-    height: 100vh;
-
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-rows: 160px 1fr 50px;
-}
-
-.wrapper > div:first-child {
-    display: grid;
-    grid-template-columns: calc(var(--banner-size-x) * 2);
-    grid-template-rows: calc(var(--banner-size-y) * 2);
-}
-
-.wrapper > div:first-child > img { image-rendering: pixelated; }
-
-/* Main content of the site */
-/*
-.wrapper > div:nth-child(2) {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    gap: var(--site-grid-gap);
-}
-*/
-
-.wrapper > div:nth-child(2) > div  {
-    display: grid;
-}
-
-.wrapper > div:nth-child(2) > div {
-    grid-gap: 30px;
-}
-
-.wrapper > div:last-child > p {
-    color: var(--half-font-color);
-    font-size: 16px;
-    text-align: center;
-}
-
-.two-large {
-    grid-template-columns: 1fr 1fr;
-}
-
-.three-large {
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.large-small {
-    grid-template-columns: 2fr 2fr 1fr;
-}
-
-.small-large {
-    grid-template-columns: 1fr 2fr 2fr;
-}
-
-.double-stack-left {
-    grid-template-columns: 2fr 3fr 3fr;
-    grid-template-rows: auto auto;
-}
-
-.double-stack-left > button:nth-child(1) {
-    grid-row: 1 / 3;
-}
-
-.double-stack-right {
-    grid-template-columns: 3fr 3fr 2fr;
-    grid-template-rows: auto auto;
-}
-
-.double-stack-right > button:nth-child(3) {
-    grid-row: 1 / 3;
-    grid-column: 3;
+p {
+    color: var(--color-text);
 }
